@@ -14,7 +14,7 @@ var options = {'useCreateIndex': true,
 }
 mongoose.connect("mongodb://localhost:27017/restful_blog_app", options);
 app.set("view engine", "ejs");
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, '/public')));
 app.set('views', path.join(__dirname, '/views'));
 app.use(bodyParser.urlencoded({extended:true}))
 
